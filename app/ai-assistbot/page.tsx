@@ -31,8 +31,8 @@ import { Arrow } from "@radix-ui/react-tooltip";
 // Add these type definitions
 declare global {
   interface Window {
-    SpeechRecognition: typeof SpeechRecognition;
-    webkitSpeechRecognition: typeof SpeechRecognition;
+    SpeechRecognition: any;
+    webkitSpeechRecognition: any;
   }
 }
 
