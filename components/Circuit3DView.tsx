@@ -105,11 +105,11 @@ export default function Circuit3DView() {
                   new THREE.Vector3(...comp.connection),
                 ]
                 const wireGeometry = new THREE.BufferGeometry().setFromPoints(points)
-                return (
-                  <line key={index} geometry={wireGeometry}>
-                    <lineBasicMaterial color="#111" linewidth={2} />
-                  </line>
+                const threeLine = new THREE.Line(
+                  wireGeometry,
+                  new THREE.LineBasicMaterial({ color: '#111', linewidth: 2 })
                 )
+                return <primitive key={index} object={threeLine} />
 
               default:
                 return null

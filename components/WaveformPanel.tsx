@@ -4,9 +4,10 @@ import React from 'react'
 import dynamic from 'next/dynamic'
 
 // react-plotly is SSR-unfriendly; load dynamically
-const Plot = dynamic(() => import('react-plotly.js'), { ssr: false })
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Plot: any = dynamic(() => import('react-plotly.js'), { ssr: false })
 
-type Trace = {
+export type Trace = {
   name: string
   x: number[]   // time
   y: (number | 0 | 1)[] // values (analog voltage or digital 0/1)

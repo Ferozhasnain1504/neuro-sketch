@@ -14,7 +14,7 @@ function Model({ modelPath }: { modelPath: string }) {
 }
 
 export default function ThreeViewerPage() {
-  const [selectedModel, setSelectedModel] = useState('/models/transistor.glb')
+  const [selectedModel, setSelectedModel] = useState('/models/circuit.glb')
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#EAF3FB] via-[#F8FBFD] to-white flex flex-col items-center p-6">
