@@ -1,0 +1,51 @@
+[
+  {
+    "id": "resistor_divider",
+    "name": "Resistor Divider",
+    "type": "analog",
+    "description": "A simple voltage divider using two resistors.",
+    "circuitjs": "v 64 128 64 80 0 0 40 5 0 0 0.5\nr 64 128 144 128 0 1000\nr 144 128 144 208 0 2000\ng 144 208 144 256 0",
+    "components": [
+      { "type": "voltage_source", "x": 64, "y": 80 },
+      { "type": "resistor", "x": 104, "y": 128 },
+      { "type": "resistor", "x": 144, "y": 168 },
+      { "type": "ground", "x": 144, "y": 256 }
+    ]
+  },
+  {
+    "id": "rc_lowpass",
+    "name": "RC Low Pass Filter",
+    "type": "analog",
+    "description": "A basic RC circuit that filters high frequencies.",
+    "circuitjs": "v 64 128 64 80 0 0 40 5 0 0 0.5\nr 64 128 144 128 0 1000\nc 144 128 144 208 0 1e-6\ng 144 208 144 256 0",
+    "components": [
+      { "type": "voltage_source", "x": 64, "y": 80 },
+      { "type": "resistor", "x": 104, "y": 128 },
+      { "type": "capacitor", "x": 144, "y": 168 },
+      { "type": "ground", "x": 144, "y": 256 }
+    ]
+  },
+  {
+    "id": "nand_gate",
+    "name": "NAND Gate",
+    "type": "digital",
+    "description": "A simple NAND logic gate implemented with transistors.",
+    "circuitjs": "v 64 128 64 80 0 0 40 5 0 0 0.5\n162 144 128 144 176 0 2 5.0 0.1 0.1 0.1\nw 64 128 144 128 0\nw 144 176 144 208 0\ng 144 208 144 256 0",
+    "components": [
+      { "type": "transistor", "x": 144, "y": 128 },
+      { "type": "ground", "x": 144, "y": 256 }
+    ]
+  },
+  {
+    "id": "full_adder",
+    "name": "Full Adder",
+    "type": "digital",
+    "description": "A digital full adder circuit that adds three input bits.",
+    "circuitjs": "v 64 128 64 80 0 0 40 5 0 0 0.5\nS 64 128 128 128 0 1 false\nS 128 128 192 128 0 1 false\nS 192 128 256 128 0 1 false\nw 256 128 320 128 0\ng 320 128 320 176 0",
+    "components": [
+      { "type": "logic_gate", "subtype": "XOR", "x": 128, "y": 128 },
+      { "type": "logic_gate", "subtype": "AND", "x": 192, "y": 128 },
+      { "type": "logic_gate", "subtype": "OR", "x": 256, "y": 128 }
+    ]
+  }
+]
