@@ -115,7 +115,7 @@ Contributions, issues, and feature requests are welcome. Feel free to open a pul
 
 ## 📄 License
 
-No license has been specified yet for this repository. Consider adding one (e.g. MIT) if you intend for others to reuse this code.
+No license has been specified yet for this repository.
 
 ---
 
